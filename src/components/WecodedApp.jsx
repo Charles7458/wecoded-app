@@ -20,14 +20,16 @@ function Post({isDark, title, postUrl, username,profilePicUrl, desc, tag_list}){
                 <img alt='profile pic' src={profilePicUrl} className="pfp"/>
                 <p className="username">{username}</p>
             </div>
-            <p style={{margin:'20px'}}>
-                tags: 
-                <div style={{width:'100px', marginLeft:'30px', display:'flex'}}>
+            <div className="tags-div">
+
+                <div className="tag-container">
                     {tag_list.map(tag => {
-                        return <b className="tag">{tag}</b>
+                        return <b className={isDark ? 'tag-dark' : 'tag'}>#{tag}</b>
                     })}
                 </div>
-            </p>
+            </div>
+            
+
             
         </div>
     )

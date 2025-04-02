@@ -108,13 +108,15 @@
 }
 
 .post {
-  height: 300px;
+  height: 240px;
   width: 70vw;
   border-radius: 20px;
-  padding: 40px;
+  padding: 20px;
   background-color: rgb(255, 255, 255);
   margin: 20px 0px;
   justify-self: center;
+  justify-content: center;
+  align-items: center;
   text-overflow: ellipsis;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -122,13 +124,15 @@
 }
 
 .post-dark {
-  height: 300px;
+  height: 240px;
   width: 70vw;
   border-radius: 20px;
-  padding: 30px;
+  padding: 20px;
   background-color: rgb(44.4, 44.4, 44.4);
   margin: 20px 0px;
   justify-self: center;
+  justify-content: center;
+  align-items: center;
   text-overflow: ellipsis;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -136,7 +140,6 @@
 }
 
 .post-text {
-  margin-bottom: 20px;
   width: 100%;
   overflow: hidden;
   padding: 10px;
@@ -172,10 +175,11 @@
 .post-p {
   display: block;
   font-size: clamp(12px, 2vw, 15px);
-  width: 100%;
+  width: 90%;
   text-wrap: wrap;
   overflow-x: hidden;
   margin: 20px;
+  margin-left: 30px;
 }
 
 .pfp-name {
@@ -203,11 +207,40 @@
   font-weight: 600;
 }
 
+.tags-div {
+  display: flex;
+  width: 100%;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.tag-container {
+  display: flex;
+  margin: 20px;
+  width: 100%;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  gap: 5px 0px;
+}
+
 .tag {
-  margin: 0px 10px;
+  margin: 0px 5px;
+  height: fit-content;
+  width: fit-content;
   background-color: rgb(204, 204, 204);
-  padding: 10px 15px;
+  padding: 5px 10px;
   border-radius: 15px;
+  font-size: clamp(10px, 1vw, 15px);
+}
+
+.tag-dark {
+  margin: 0px 5px;
+  height: fit-content;
+  width: fit-content;
+  background-color: rgb(104, 104, 104);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: clamp(10px, 1vw, 15px);
 }
 
 @media (max-width: 600px) {
