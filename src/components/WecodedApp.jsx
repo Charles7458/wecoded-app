@@ -11,15 +11,18 @@ function Post({isDark, title, postUrl, username,profilePicUrl, desc, tag_list}){
 
     return (
         <div className={isDark ? 'post-dark' : 'post'}>
-            <a href={`${postUrl}`} target="_blank" className="post-h2">{title}</a>
-            <p className="post-p">{desc}</p>
-            <div style={{display:'flex', verticalAlign:'center', alignItems:'center'}}>
+            <div className="post-text">
+                <a href={`${postUrl}`} target="_blank" className={isDark ? 'post-h2-dark' : 'post-h2'}>{title}</a>
+                <p className="post-p">{desc}</p>
+            </div>
+            <div className="pfp-name">
+            <img src={isDark ? icon2 : icon1} alt='wecoded-icon' height='20px' className="pfp-badge"/>
                 <img alt='profile pic' src={profilePicUrl} className="pfp"/>
                 <p className="username">{username}</p>
             </div>
             <p style={{margin:'20px'}}>
                 tags: 
-                <div style={{width:'100px', marginLeft:'30px'}}>
+                <div style={{width:'100px', marginLeft:'30px', display:'flex'}}>
                     {tag_list.map(tag => {
                         return <b className="tag">{tag}</b>
                     })}
@@ -71,7 +74,6 @@ export default function WecodedApp(){
 
             {/* posts div */}
             <div className={isDark ? "posts-wrapper-dark" : "posts-wrapper"}>
-                <img className="post-symbol" alt="wecoded-icon"></img>
                     {postsData.map( post => {
                         return <Post key={post.id}
                                     isDark={isDark}
