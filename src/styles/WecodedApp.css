@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.AppBody {
+  background-color: rgb(215, 228, 228);
+  color: black;
+  min-height: 100vh;
+  padding-top: 33px;
+  height: fit-content;
+  overflow-y: auto;
+}
+
+.AppBody-dark {
+  background-color: rgb(21, 21, 21);
+  color: white;
+  min-height: 100vh;
+  padding-top: 33px;
+  height: fit-content;
+  overflow-y: auto;
+}
+
+.head {
+  position: relative;
+  top: 40px;
+  left: 20px;
+  margin: 0;
+}
+
+.ch-head-div {
+  background-image: url("../assets/app-gradient.jpg");
+  background-size: 1800px;
+  background-position: center;
+  color: black;
+  padding: 50px;
+  justify-self: center;
+  width: 100%;
+}
+
+.ch-head-div-dark {
+  background-image: url("../assets/app-gradient.jpg");
+  background-size: 1800px;
+  background-position: center;
+  color: azure;
+  padding: 50px;
+  justify-self: center;
+  width: 100%;
+}
+
+.ch-head-border {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  border: 5px solid black;
+  padding: 50px;
+  width: fit-content;
+  justify-self: center;
+}
+
+.ch-head-border-dark {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  border: 5px solid azure;
+  padding: 30px 60px;
+  width: fit-content;
+  justify-self: center;
+}
+
+.by-me {
+  padding-top: 10px;
+}
+
+.ch-head {
+  padding-top: 10px;
+  display: block;
+  font-size: 30px;
+}
+
+.posts-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 700px;
+  width: 80vw;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom right, #CCEA71, #4531EA, #9D00E5);
+  margin: 70px 0px;
+  overflow-y: scroll;
+}
+
+.posts-wrapper-dark {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 700px;
+  width: 80vw;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom right, #4531EA, #9D00E5);
+  margin: 70px 0px;
+  overflow-y: scroll;
+}
+
+.post {
+  height: 300px;
+  width: 70vw;
+  border-radius: 20px;
+  padding: 40px;
+  background-color: rgb(255, 255, 255);
+  margin: 20px 0px;
+  justify-self: center;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.post-dark {
+  height: 300px;
+  width: 70vw;
+  border-radius: 20px;
+  padding: 40px;
+  background-color: rgb(44.4, 44.4, 44.4);
+  margin: 20px 0px;
+  justify-self: center;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.post-h2 {
+  color: inherit;
+  font-size: clamp(15px, 4vw, 25px);
+  width: 20vw;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.post-h2:hover {
+  text-decoration: underline;
+}
+
+.post-p {
+  font-size: clamp(12px, 2vw, 15px);
+  width: 20vw;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.pfp {
+  height: clamp(30px, 3vw, 100px);
+  width: clamp(30px, 3vw, 100px);
+  border-radius: 30px;
+  border: 1px solid black;
+}
+
+.username {
+  margin-left: 15px;
+  font-weight: 600;
+}
+
+.tag {
+  margin: 0px 10px;
+  background-color: rgb(204, 204, 204);
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+/*# sourceMappingURL=WecodedApp.css.map */

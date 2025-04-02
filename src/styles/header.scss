@@ -1,0 +1,62 @@
+@use 'sass:color';
+
+$bg-light: azure;
+$bg-dark: rgb(21, 21, 21);
+$DEV-blue: #4531EA ;
+$DEV-green: #CCEA71 ;
+$DEV-purple: #9D00E5;
+$header-bg-light: rgba(119, 240, 174, 0.4);
+$header-bg-dark: color.scale($bg-dark, $lightness: 20%);
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    height: 70px;
+    width: 100%;
+    background-color: $header-bg-light;
+}
+
+.header-dark {
+    position: fixed;
+    display: block;
+    top: 0;
+    z-index: 2;
+    height: 70px;
+    width: 100%;
+    background-color: $header-bg-dark;
+}
+
+.theme-btn-span {
+    float: right;
+    height: 60px;
+    margin-right: 50px;
+}
+
+.theme-btn{
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 30px;
+    padding: 0px 30px;
+    
+}
+
+.hidden {
+    transform: translateY(-100%);
+    transition: 0.5s ease-in-out;
+}
+
+.visible {
+    transform: translateY(0);
+    transition: 0.5s ease-in-out;
+}
+
+@media(max-width: 600px) {
+    .theme-btn-span{
+        margin-right: 20px;
+    }
+    .theme-btn{
+        padding: 20px;
+    }
+}
