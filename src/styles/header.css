@@ -1,4 +1,9 @@
 .header {
+  display: flex;
+  padding: 20px;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -8,23 +13,31 @@
 }
 
 .header-dark {
+  display: flex;
+  padding: 20px;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
-  display: block;
   top: 0;
   z-index: 2;
   height: 70px;
   width: 100%;
-  background-color: rgb(91.2, 91.2, 91.2);
+  background-color: rgb(44.4, 44.4, 44.4);
 }
 
-.theme-btn-span {
+.wecoded-logo {
+  height: clamp(20px, 6.6666666667vw, 40px);
+  vertical-align: middle;
+}
+
+.theme-btn-div {
   display: flex;
-  float: right;
   height: 60px;
-  margin-top: 5px;
-  margin-right: 50px;
+  margin-right: 20px;
   align-items: center;
   vertical-align: middle;
+  justify-self: end;
 }
 
 .theme-btn {
@@ -37,11 +50,11 @@
 }
 
 .dev {
-  height: 40px;
+  height: clamp(20px, 5vw, 40px);
 }
 
 .dev:hover {
-  height: 38px;
+  height: clamp(18px, 5vw - 2px, 38px);
 }
 
 .hidden {
