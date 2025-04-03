@@ -1,0 +1,37 @@
+@use 'sass:color';
+
+$bg-light: rgb(215, 228, 228);
+$bg-dark: rgb(21, 21, 21);
+$DEV-blue: #4531EA ;
+$DEV-green: #CCEA71 ;
+$DEV-purple: #9D00E5;
+$header-bg-light: rgba(119, 240, 174, 0.4);
+$header-bg-dark: color.scale($bg-dark, $lightness: 30%);
+
+.footer {
+    display: grid;
+    bottom: 0;
+    grid-template-columns: 1fr 30vw;
+    background-color: $bg-dark;
+    color: white;
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-dark {
+    display: grid;
+    bottom: 0;
+    grid-template-columns: 1fr 30vw;
+    background-color: $bg-light;
+    color: black;
+    height: 100px;
+    width: 100%;
+}
+
+@media(max-width:600px){
+    .desk{
+        display: none;
+    }
+}

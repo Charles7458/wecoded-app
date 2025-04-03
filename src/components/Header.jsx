@@ -19,22 +19,22 @@ export default function Header({isDark, setIsDark}) {
         setIsDark(true)
     }
 
-    // var prevScrollPos = window.pageYOffset+60;
-    // window.onscroll = function(){
-    //     var currentScrollPos = window.pageYOffset;
+    var prevScrollPos = window.pageYOffset+60;
+    window.onscroll = function(){
+        var currentScrollPos = window.pageYOffset;
 
-    //     if(prevScrollPos > currentScrollPos){
-    //         document.getElementById('header').classList.remove('hidden');
-    //         document.getElementById('header').classList.add('visible');
-    //     }
+        if(prevScrollPos > currentScrollPos){
+            document.getElementById('header').classList.remove('hidden');
+            document.getElementById('header').classList.add('visible');
+        }
 
-    //     else {
-    //         document.getElementById('header').classList.remove('visible');
-    //         document.getElementById('header').classList.add('hidden');
-    //     }
+        else {
+            document.getElementById('header').classList.remove('visible');
+            document.getElementById('header').classList.add('hidden');
+        }
 
-    //     prevScrollPos = currentScrollPos;
-    // }
+        prevScrollPos = currentScrollPos;
+    }
 
     return(
         <header className={isDark ? 'header-dark': 'header'} id="header">

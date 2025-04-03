@@ -4,7 +4,9 @@ import '../styles/WecodedApp.css'
 import wecodedIcon from '../assets/wecoded-icon.png';
 import icon2 from '../assets/icon2.png';
 import icon1 from '../assets/icon1.png';
+import articlePic from '../assets/gender_equity.webp'
 import Header from "./Header";
+import Footer from "./Footer";
 
 
 function Post({isDark, title, postUrl, username,profilePicUrl, desc,createdAt, tag_list}){
@@ -78,18 +80,22 @@ export default function WecodedApp(){
                         <div>
                             <h2 className="ch-head">WE_CODED CHALLENGE 2025</h2>
                             <p className='by-me' >By Charles</p>
-                        </div>
+                         </div>
                         
                     </div>
                 </div>
             {/* challenge heading ends */}
             <div className="wecoded-heading">
-                <h1 >WE__CODED:</h1>
+                {/* <h1 >WE__CODED:</h1>
                 <p className="wecoded-desc">we_coded is a celebration of individuals who are underrepresented and otherwise marginalized in 
                     software development on the basis of gender: 
                     including women, transgender, nonbinary, gender non-conforming, and two spirit people.
-                </p>
-                <a href="https://dev.to/new/wecoded" target="_blank"><button className="create-entry">Create Your Entry</button></a>
+                </p> */}
+                <h2 className="wecoded-desc">
+                        In this celebration, let's listen to the challenges and
+                         struggles faced by women and the under-represented individuals 
+                         from the tech industry and celebrate their victories with them.</h2>
+                <a href="https://dev.to/new/wecoded" target="_blank"><button className="create-entry">Share Your Story</button></a>
             </div>
             
             <div className="filter">   
@@ -98,9 +104,12 @@ export default function WecodedApp(){
                         <option value="wecoded">#wecoded</option>
                         <option value="womenintech">#womenintech</option>
                     </select>
+                <br />
+                <h2 style={{marginTop:'20px'}}>Scroll to view the posts:</h2>
             </div>
             
             {/* posts div */}
+
             <div className={changeClass("posts-wrapper")}>
                 
                     {postsData.map( post => {
@@ -115,6 +124,8 @@ export default function WecodedApp(){
                                     tag_list={post.tag_list}/>
                     })}
             </div>
+
+            <Footer isDark={isDark}/>
         </div>
     )
 }

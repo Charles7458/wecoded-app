@@ -125,6 +125,7 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
 .filter {
     margin-top: 30px;
     margin-left: 40px;
+    margin-bottom: 30px;
 }
 
 
@@ -132,13 +133,12 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
     display: grid;
     grid-template-columns: 1fr;
     // row-gap: 150px;
-    height: 700px;
+    height: 600px;
     width: 80vw;
     justify-self: center;
     justify-content: center;
     align-items: center;
     // background-image: linear-gradient(to bottom right, $DEV-blue, lightgreen,$DEV-purple);
-    margin-top: 40px;
     margin-bottom: 100px;
     overflow-y: scroll;
     // padding: 100px 0px;
@@ -148,13 +148,12 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
     display: grid;
     grid-template-columns: 1fr;
     // row-gap: 150px;
-    height: 700px;
+    height: 600px;
     width: 80vw;
     justify-self: center;
     justify-content: center;
     align-items: center;
     // background-image: linear-gradient(to bottom right, $DEV-blue,$DEV-purple);
-    margin-top: 40px;
     margin-bottom: 100px;
     overflow-y: scroll;
     
@@ -313,6 +312,35 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
     padding: 5px 10px;
     border-radius: 15px;
     font-size: clamp(10px, calc(1vw), 15px);
+}
+
+.article {
+    height: fit-content;
+    width: 75vw;
+    padding: 20px;
+    background-color: white;
+    margin: 30px;
+    border-radius: 20px;
+}
+
+.article-dark {
+    height: fit-content;
+    width: 75vw;
+    padding: 20px;
+    background-color: color.scale($bg-dark,$lightness: 10%);
+    margin: 30px;
+    border-radius: 20px;
+}
+
+.article-pic{
+    background-image: url('../assets/gender_equity.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height: clamp(200px, 30vw, 300px);
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 10px;
 }
 
 @media(max-width: 600px){

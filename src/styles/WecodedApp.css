@@ -112,17 +112,17 @@
 .filter {
   margin-top: 30px;
   margin-left: 40px;
+  margin-bottom: 30px;
 }
 
 .posts-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  height: 700px;
+  height: 600px;
   width: 80vw;
   justify-self: center;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
   margin-bottom: 100px;
   overflow-y: scroll;
 }
@@ -130,12 +130,11 @@
 .posts-wrapper-dark {
   display: grid;
   grid-template-columns: 1fr;
-  height: 700px;
+  height: 600px;
   width: 80vw;
   justify-self: center;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
   margin-bottom: 100px;
   overflow-y: scroll;
 }
@@ -291,6 +290,34 @@
   padding: 5px 10px;
   border-radius: 15px;
   font-size: clamp(10px, 1vw, 15px);
+}
+
+.article {
+  height: fit-content;
+  width: 75vw;
+  padding: 20px;
+  background-color: white;
+  margin: 30px;
+  border-radius: 20px;
+}
+
+.article-dark {
+  height: fit-content;
+  width: 75vw;
+  padding: 20px;
+  background-color: rgb(44.4, 44.4, 44.4);
+  margin: 30px;
+  border-radius: 20px;
+}
+
+.article-pic {
+  background-image: url("../assets/gender_equity.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: clamp(200px, 30vw, 300px);
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 600px) {
