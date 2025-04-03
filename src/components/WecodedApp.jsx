@@ -7,7 +7,7 @@ import icon1 from '../assets/icon1.png';
 import Header from "./Header";
 
 
-function Post({isDark, title, postUrl, username,profilePicUrl, desc, tag_list}){
+function Post({isDark, title, postUrl, username,profilePicUrl, desc,createdAt, tag_list}){
 
     return (
         <div className={isDark ? 'post-dark' : 'post'}>
@@ -15,6 +15,7 @@ function Post({isDark, title, postUrl, username,profilePicUrl, desc, tag_list}){
                 <a href={`${postUrl}`} target="_blank" className={isDark ? 'post-h2-dark' : 'post-h2'}>{title}</a>
                 <p className="post-p">{desc}</p>
             </div>
+            <p className="created-at">{createdAt}</p>
             <div className="pfp-name">
             <img src={isDark ? icon2 : icon1} alt='wecoded-icon' height='20px' className="pfp-badge"/>
                 <img alt='profile pic' src={profilePicUrl} className="pfp"/>
@@ -39,13 +40,22 @@ function Post({isDark, title, postUrl, username,profilePicUrl, desc, tag_list}){
 export default function WecodedApp(){
     const [postsData, setPostsData] = useState([])
     const [isDark, setIsDark] = useState(JSON.parse(localStorage.getItem("userTheme")) || false)
+    const [filterTag, setFilterTag] = useState("wecoded");
+    function changeClass(classname){
+        if(isDark){
+            return `${classname}-dark`
+        }
+        else {
+            return classname
+        }
+    }
     
     useEffect( () => {
-       axios.get('https://dev.to/api/articles?tag=wecoded')
+       axios.get('https://dev.to/api/articles?tag='+filterTag)
             .then(response => response.data)
             .then(data => {console.log(data); setPostsData(data); });
             
-    },[]);
+    },[filterTag]);
 
     useEffect( ()=> {
         localStorage.setItem("userTheme", `${isDark}`);
@@ -59,23 +69,40 @@ export default function WecodedApp(){
             
             < Header isDark={isDark} setIsDark={setIsDark} />
             {/* challenge heading begins */}
-                <h1 className="head">Hello DEVS!</h1>
+                <h1 className="head">DEVS! Welcome To</h1>
                         {/* challenge heading */}
-                <div className={isDark ? "ch-head-div-dark" : "ch-head-div"}>
+                <div className={changeClass("ch-head-div")}>
                     {/* challenge heading text div*/}
-                    <div className={isDark ? "ch-head-border-dark" : "ch-head-border"}>
+                    <div className={changeClass("ch-head-border")}>
                         <img alt="wecoded-icon" src={isDark ? icon2 : icon1} height='100px' width='100px' />
                         <div>
                             <h2 className="ch-head">WE_CODED CHALLENGE 2025</h2>
-                            <p className='by-me' >By Charles7458</p>
+                            <p className='by-me' >By Charles</p>
                         </div>
                         
                     </div>
                 </div>
             {/* challenge heading ends */}
-
+            <div className="wecoded-heading">
+                <h1 >WE__CODED:</h1>
+                <p className="wecoded-desc">we_coded is a celebration of individuals who are underrepresented and otherwise marginalized in 
+                    software development on the basis of gender: 
+                    including women, transgender, nonbinary, gender non-conforming, and two spirit people.
+                </p>
+                <a href="https://dev.to/new/wecoded" target="_blank"><button className="create-entry">Create Your Entry</button></a>
+            </div>
+            
+            <div className="filter">   
+                Filter with tag:<br></br>
+                    <select value={filterTag} onChange={e=>setFilterTag(e.target.value)} style={{marginTop:'10px',padding:'10px 0px',width:'300px'}}>
+                        <option value="wecoded">#wecoded</option>
+                        <option value="womenintech">#womenintech</option>
+                    </select>
+            </div>
+            
             {/* posts div */}
-            <div className={isDark ? "posts-wrapper-dark" : "posts-wrapper"}>
+            <div className={changeClass("posts-wrapper")}>
+                
                     {postsData.map( post => {
                         return <Post key={post.id}
                                     isDark={isDark}
@@ -84,15 +111,10 @@ export default function WecodedApp(){
                                     username={post.user.username} 
                                     profilePicUrl={post.user.profile_image_90} 
                                     desc={post.description} 
+                                    createdAt={post.readable_publish_date}
                                     tag_list={post.tag_list}/>
                     })}
             </div>
         </div>
     )
-    
-
-    
-        
-        
-    
 }

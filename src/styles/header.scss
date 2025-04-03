@@ -5,8 +5,8 @@ $bg-dark: rgb(21, 21, 21);
 $DEV-blue: #4531EA ;
 $DEV-green: #CCEA71 ;
 $DEV-purple: #9D00E5;
-$header-bg-light: rgba(119, 240, 174, 0.4);
-$header-bg-dark: color.scale($bg-dark, $lightness: 20%);
+$header-bg-light: rgb(119, 240, 174);
+$header-bg-dark: color.scale($bg-dark, $lightness: 30%);
 
 .header {
     position: fixed;
@@ -28,9 +28,13 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 20%);
 }
 
 .theme-btn-span {
+    display: flex;
     float: right;
     height: 60px;
+    margin-top: 5px;
     margin-right: 50px;
+    align-items: center;
+    vertical-align: middle;
 }
 
 .theme-btn{
@@ -39,7 +43,15 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 20%);
     height: 100%;
     width: 30px;
     padding: 0px 30px;
-    
+    cursor: pointer;
+}
+
+.dev{
+    height: 40px;
+}
+
+.dev:hover {
+    height: 38px;
 }
 
 .hidden {
@@ -54,9 +66,6 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 20%);
 
 @media(max-width: 600px) {
     .theme-btn-span{
-        margin-right: 20px;
-    }
-    .theme-btn{
-        padding: 20px;
+        margin-right: 30px;
     }
 }

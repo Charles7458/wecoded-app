@@ -15,7 +15,6 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
 }
 
 
-
 .AppBody {
     background-color: $bg-light;
     color: black;
@@ -94,6 +93,41 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
     font-size: 30px;
 } 
 
+.wecoded-heading {
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.wecoded-desc {
+    margin-top: 30px;
+    // margin-left: 50px;
+    width: 75vw;
+    line-height: 30px;
+    text-wrap: wrap;
+}
+
+.create-entry {
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: $DEV-purple;
+    color: white;
+    border: none;
+}
+
+.create-entry:hover{
+    padding: 13px 28px;
+    background-color: color.scale($DEV-purple,$lightness: -10%);
+    transition-delay: 0.15s;
+}
+
+.filter {
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+
 .posts-wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -103,8 +137,9 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
     justify-self: center;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom right, $DEV-green, $DEV-blue,$DEV-purple);
-    margin: 70px 0px;
+    // background-image: linear-gradient(to bottom right, $DEV-blue, lightgreen,$DEV-purple);
+    margin-top: 40px;
+    margin-bottom: 100px;
     overflow-y: scroll;
     // padding: 100px 0px;
 }
@@ -118,14 +153,15 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
     justify-self: center;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom right, $DEV-blue,$DEV-purple);
-    margin: 70px 0px;
+    // background-image: linear-gradient(to bottom right, $DEV-blue,$DEV-purple);
+    margin-top: 40px;
+    margin-bottom: 100px;
     overflow-y: scroll;
-    // padding: 100px 0px;
+    
 }
 
 .post {
-    height: 240px;
+    height: 260px;
     width: 70vw;
     border-radius: 20px;
     padding: 20px;
@@ -138,10 +174,15 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
     overflow-x: hidden;
     overflow-y: hidden;
     white-space: nowrap;
+    transition-delay: 0.15s;
+}
+
+.post:hover {
+    box-shadow: 0px 0px 20px 5px $DEV-purple;
 }
 
 .post-dark {
-    height: 240px;
+    height: 260px;
     width: 70vw;
     border-radius: 20px;
     padding: 20px;
@@ -154,6 +195,11 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
     overflow-x: hidden;
     overflow-y: hidden;
     white-space: nowrap;
+    transition-delay: 0.15s;
+}
+
+.post-dark:hover {
+    box-shadow: 0px 0px 20px 5px $DEV-green;
 }
 
 .post-text {
@@ -197,8 +243,15 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
     width: 90%;
     text-wrap: wrap;
     overflow-x: hidden;
-    margin: 20px;
+    margin-top: 20px;
     margin-left: 30px;
+}
+
+.created-at{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: gray;
+    font-weight: 700;
 }
 
 .pfp-name {
