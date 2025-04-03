@@ -91,9 +91,8 @@ export default function WecodedApp(){
                     including women, transgender, nonbinary, gender non-conforming, and two spirit people.
                 </p> */}
                 <h2 className="wecoded-desc">
-                        In this celebration, let's listen to the challenges and
-                         struggles faced by women and the under-represented individuals 
-                         from the tech industry and celebrate their victories with them.</h2>
+                    Let's celebrate diversity in tech with Code!
+                </h2>
                 <a href="https://dev.to/new/wecoded" target="_blank"><button className="create-entry">Share Your Story</button></a>
             </div>
             
