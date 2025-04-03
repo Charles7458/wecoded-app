@@ -268,6 +268,7 @@ p{
     vertical-align: middle;
     align-items: center;
     width: 60vw;
+    padding-top: 5px;
     overflow: hidden;
 }
 
@@ -336,7 +337,17 @@ p{
     padding: 20px;
     background-color: white;
     margin: 30px;
+    line-height: 25px;
     border-radius: 20px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        overflow: hidden;
+        text-wrap: wrap;
+    }
 }
 
 .article-dark {
@@ -345,19 +356,19 @@ p{
     padding: 20px;
     background-color: color.scale($bg-dark,$lightness: 10%);
     margin: 30px;
+    line-height: 25px;
     border-radius: 20px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        overflow: hidden;
+        text-wrap: wrap;
+    }
 }
 
-.article-pic{
-    background-image: url('../assets/gender_equity.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    height: clamp(200px, 30vw, 300px);
-    width: 100%;
-    border-radius: 20px;
-    margin-bottom: 10px;
-}
 
 @media(max-width: 600px){
 

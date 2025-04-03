@@ -123,6 +123,18 @@ export default function WecodedApp(){
                     })}
             </div>
 
+            <article className={changeClass("article")}>
+                    <h2>The Evolution from SheCoded to WeCoded</h2>
+                    <p>
+                    Since 2018, DEV has celebrated International Women's Day with SheCoded, a call to action for the community to share powerful stories from women in 
+                    tech about their journeys, challenges, and triumphs. What began as a platform for women's voices naturally evolved into WeCoded in 2023 —an inclusive
+                    space that amplifies all underrepresented and marginalized voices in our industry.<br /><br />
+
+This evolution reflects our commitment to creating a community where everyone can see themselves represented, 
+share their experiences, and find inspiration. WeCoded builds on the foundation of SheCoded while expanding our celebration to embrace the rich diversity of 
+perspectives that make our community stronger.</p>
+            </article>
+
             <Footer isDark={isDark}/>
         </div>
     )
