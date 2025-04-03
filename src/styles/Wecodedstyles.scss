@@ -13,7 +13,13 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
     padding:0;
     box-sizing: border-box;
 }
+h1, h2{
+    font-family: Montserrat, 'Times New Roman';
+}
 
+p{
+    font-family: Roboto, 'Times New Roman';
+}
 
 .AppBody {
     background-color: $bg-light;
@@ -91,6 +97,7 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
     padding-top: 10px;
     display: block;
     font-size: 30px;
+    // font-family: sans-serif;
 } 
 
 .wecoded-heading {
@@ -213,6 +220,7 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
 .post-h2 {
     color: $DEV-purple;
     font-size: clamp(15px,4vw,25px);
+    font-family: Roboto, sans-serif;
     font-weight:900;
     width: 100%;
     display: block;
@@ -224,6 +232,7 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
 .post-h2-dark{
     color: $DEV-green;
     font-size: clamp(15px,4vw,25px);
+    font-family: Roboto, sans-serif;
     font-weight: 900;
     width: 100%;
     display: block;
@@ -239,6 +248,7 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
 .post-p{
     display: block;
     font-size: clamp(12px, 2vw, 15px);
+    font-family: Lato, 'Times New Roman';
     width: 90%;
     text-wrap: wrap;
     overflow-x: hidden;
