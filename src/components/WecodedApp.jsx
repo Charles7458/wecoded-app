@@ -4,7 +4,6 @@ import '../styles/WecodedApp.css'
 import wecodedIcon from '../assets/wecoded-icon.png';
 import icon2 from '../assets/icon2.png';
 import icon1 from '../assets/icon1.png';
-import articlePic from '../assets/gender_equity.webp'
 import Header from "./Header";
 import Footer from "./Footer";
 
