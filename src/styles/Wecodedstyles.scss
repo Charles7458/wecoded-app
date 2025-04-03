@@ -160,7 +160,7 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
 }
 
 .post {
-    height: 260px;
+    height: 280px;
     width: 70vw;
     border-radius: 20px;
     padding: 20px;
@@ -181,7 +181,7 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
 }
 
 .post-dark {
-    height: 260px;
+    height: 280px;
     width: 70vw;
     border-radius: 20px;
     padding: 20px;
@@ -257,6 +257,8 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
     display: flex;
     vertical-align: middle;
     align-items: center;
+    width: 60vw;
+    overflow: hidden;
 }
 
 .pfp {
@@ -276,6 +278,10 @@ $header-bg-dark: color.scale($bg-dark, $lightness: 30%, $alpha: -70%);
 .username {
     margin-left: 15px;
     font-weight: 600;
+    width: 60vw;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .tags-div {
