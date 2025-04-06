@@ -72,17 +72,20 @@ export default function WecodedApp(){
             {/* challenge heading begins */}
                 <h1 className="head">DEVS! Welcome To</h1>
                         {/* challenge heading */}
-                <div className={changeClass("ch-head-div")}>
-                    {/* challenge heading text div*/}
-                    <div className={changeClass("ch-head-border")}>
-                        <img alt="wecoded-icon" src={isDark ? icon2 : icon1} height='100px' width='100px' />
-                        <div>
-                            <h2 className="ch-head">WE_CODED CHALLENGE 2025</h2>
-                            <p className='by-me' >By Charles</p>
-                         </div>
-                        
+                <div className='ch-head-bg'>
+                    <div className={changeClass("ch-head-div")}>
+                        {/* challenge heading text div*/}
+                        <div className={changeClass("ch-head-border")}>
+                            <img alt="wecoded-icon" src={isDark ? icon2 : icon1} height='100px' width='100px' />
+                            <div>
+                                <h2 className="ch-head">WE_CODED CHALLENGE 2025</h2>
+                                <p className='by-me' >By Charles</p>
+                             </div>
+                            
+                        </div>
                     </div>
                 </div>
+                
             {/* challenge heading ends */}
             <div className="wecoded-heading">
                 {/* <h1 >WE__CODED:</h1>

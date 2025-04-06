@@ -39,10 +39,14 @@ p {
   margin: 0;
 }
 
-.ch-head-div {
-  background-image: url("../assets/app-gradient.jpg");
+.ch-head-bg {
+  background-image: url("../assets/app-gradient-min.jpg");
   background-size: 1800px;
   background-position: center;
+}
+
+.ch-head-div {
+
   color: black;
   padding: 50px;
   justify-self: center;
@@ -50,9 +54,6 @@ p {
 }
 
 .ch-head-div-dark {
-  background-image: url("../assets/app-gradient.jpg");
-  background-size: 1800px;
-  background-position: center;
   color: azure;
   padding: 50px;
   justify-self: center;
