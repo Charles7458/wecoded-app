@@ -14,7 +14,7 @@ function Footer({isDark}) {
 
             <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
                 <p style={{marginRight:'10px'}}>Made By Charles</p>
-                <a href='https://github.com/Charles7458'>
+                <a aria-label="Go to developer's github page" href='https://github.com/Charles7458'>
                 <box-icon type='logo' name='github'size='sm' color={isDark ? "black" : "white"}></box-icon>
                 </a>
             </div>

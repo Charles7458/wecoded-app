@@ -12,7 +12,7 @@ function Post({isDark, title, postUrl, username,profilePicUrl, desc,createdAt, t
     return (
         <div className={isDark ? 'post-dark' : 'post'}>
             <div className="post-text">
-                <a href={`${postUrl}`} target="_blank" className={isDark ? 'post-h2-dark' : 'post-h2'}>{title}</a>
+                <a aria-label='Go to post page in dev.to' href={`${postUrl}`} target="_blank" className={isDark ? 'post-h2-dark' : 'post-h2'}>{title}</a>
                 <p className="post-p">{desc}</p>
             </div>
             <p className="created-at">{createdAt}</p>
