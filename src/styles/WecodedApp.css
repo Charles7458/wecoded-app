@@ -65,7 +65,7 @@ p {
   vertical-align: middle;
   align-items: center;
   border: 5px solid black;
-  padding: 50px;
+  padding: 30px 60px;
   width: fit-content;
   justify-self: center;
 }
