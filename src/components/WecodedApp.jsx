@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import axios from 'axios'
 import '../styles/WecodedApp.css'
-import wecodedIcon from '../assets/wecoded-icon.png';
 import icon2 from '../assets/icon2.png';
 import icon1 from '../assets/icon1.png';
 import Header from "./Header";
