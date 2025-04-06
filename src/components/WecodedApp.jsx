@@ -17,7 +17,7 @@ function Post({isDark, title, postUrl, username,profilePicUrl, desc,createdAt, t
             </div>
             <p className="created-at">{createdAt}</p>
             <div className="pfp-name">
-            <img src={isDark ? icon2 : icon1} alt='wecoded-icon' height='20px' className="pfp-badge"/>
+            <img src={isDark ? icon2 : icon1} alt='pfp badge' height='20px' className="pfp-badge"/>
                 <img alt='profile pic' src={profilePicUrl} className="pfp"/>
                 <p className="username">{username}</p>
             </div>
@@ -99,11 +99,12 @@ export default function WecodedApp(){
             </div>
             
             <div className="filter">   
-                Filter with tag:<br></br>
-                    <select value={filterTag} onChange={e=>setFilterTag(e.target.value)} style={{marginTop:'10px',padding:'10px 0px',width:'300px'}}>
-                        <option value="wecoded">#wecoded</option>
-                        <option value="womenintech">#womenintech</option>
-                    </select>
+                <label for='tag'>Filter with tag:</label>
+                <br></br>
+                <select name='tag' value={filterTag} onChange={e=>setFilterTag(e.target.value)} style={{marginTop:'10px',padding:'10px 0px',width:'300px'}}>
+                    <option value="wecoded">#wecoded</option>
+                    <option value="womenintech">#womenintech</option>
+                </select>
                 <br />
                 <h2 style={{marginTop:'20px'}}>Scroll to view the posts:</h2>
             </div>
@@ -125,7 +126,7 @@ export default function WecodedApp(){
                     })}
             </div>
 
-            <article className={changeClass("article")}>
+            <article aria-label="" className={changeClass("article")}>
                     <h2>The Evolution from SheCoded to WeCoded</h2>
                     <p>
                     Since 2018, DEV has celebrated International Women's Day with SheCoded, a call to action for the community to share powerful stories from women in 

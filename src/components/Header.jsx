@@ -40,13 +40,13 @@ export default function Header({isDark, setIsDark}) {
         <header className={isDark ? 'header-dark': 'header'} id="header">
 
                     {/* wecoded image */}
-                    <img src={wecodedIcon} className="wecoded-logo"/>
+                    <img alt='header logo' src={wecodedIcon} className="wecoded-logo"/>
 
                     {/* buttons for theme toggle */}
                     <div className="theme-btn-div">
                         
-                            <a href="https://dev.to" target="_blank"><img src={devImg} className="dev"/></a>
-                            <button className="theme-btn" onClick={isDark ? changeToLightTheme : changeToDarkTheme}>{isDark ? whiteLMode : blackDMode}</button>
+                            <a href="https://dev.to" target="_blank"><img alt='dev button image'  src={devImg} className="dev"/></a>
+                            <button aria-label="theme button" className="theme-btn" onClick={isDark ? changeToLightTheme : changeToDarkTheme}>{isDark ? whiteLMode : blackDMode}</button>
         
                         
                     </div>
